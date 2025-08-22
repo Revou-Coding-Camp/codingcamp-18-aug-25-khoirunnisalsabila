@@ -22,8 +22,9 @@ form.addEventListener('submit', function(e) {
   tr.innerHTML = `
     <td>${task}</td>
     <td>${date}</td>
-    <td>Pending</td>
+    <td class="status">Pending</td>
     <td>
+      <button class="complete-btn">Complete</button>
       <button class="delete-btn">Delete</button>
     </td>
   `;
@@ -34,10 +35,19 @@ form.addEventListener('submit', function(e) {
   dateInput.value = '';
 });
 
-// Delete single Task
+// Actions: Complete & Delete
 todoBody.addEventListener('click', function(e) {
+// Delete Task
   if (e.target.classList.contains('delete-btn')) {
     e.target.closest('tr').remove();
+  }
+
+  if (e.target.classList.contains('complete-btn')) {
+    const row = e.target.closest('tr');
+    const statusCell = row.querySelector('.status');
+    statusCell.textContent = 'Done';
+    statusCell.style.color = 'green';
+    e.target.disabled = true; 
   }
 });
 
