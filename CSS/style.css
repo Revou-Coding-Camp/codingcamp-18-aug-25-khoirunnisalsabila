@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+  
+body {
+    background: #f8f5f1; /* krem muda */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 30px;
+    color: #4b3832; /* coklat tua */
+}
+  
+.container {
+    width: 90%;
+    max-width: 850px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.6s ease-in-out;
+}
+  
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6f4e37; /* coklat kopi */
+    font-size: 28px;
+    font-weight: 700;
+}
+  
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+  
+form input[type="text"],
+form input[type="date"] {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #c9b8a9;
+    font-size: 14px;
+    transition: 0.3s;
+}
+  
+form input:focus {
+    outline: none;
+    border-color: #6f4e37;
+    box-shadow: 0 0 6px rgba(111, 78, 55, 0.3);
+}
+  
+form button {
+    flex: 0.5;
+    background: #6f4e37; /* tombol coklat */
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+  
+form button:hover {
+    background: #4b3832;
+    transform: scale(1.05);
+}
+  
+.filter-section input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #c9b8a9;
+    font-size: 14px;
+    transition: 0.3s;
+}
+  
+.filter-section input:focus {
+    border-color: #6f4e37;
+    box-shadow: 0 0 6px rgba(111, 78, 55, 0.3);
+}
+  
+.delete-all-btn {
+    background: #a0522d; /* sienna */
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+  
+.delete-all-btn:hover {
+    background: #7b3f2a;
+    transform: scale(1.05);
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+  
+th, td {
+    border: 1px solid #eee;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+  
+th {
+    background: #d9c2a7; /* coklat muda */
+    color: #4b3832;
+    font-size: 15px;
+    font-weight: 600;
+}
+  
+td.status {
+    font-weight: 500;
+}
+  
+.complete-btn {
+    background: #8fbc8f; /* hijau sage */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+  
+.complete-btn:hover {
+    background: #6b8e23;
+    transform: scale(1.05);
+}
+  
+.delete-btn {
+    background: #cd5c5c; /* merah bata */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+  
+.delete-btn:hover {
+    background: #8b0000;
+    transform: scale(1.05);
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
